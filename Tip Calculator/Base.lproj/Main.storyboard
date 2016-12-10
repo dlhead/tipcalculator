@@ -81,6 +81,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="U3f-Qo-4RR"/>
+                    <connections>
+                        <outlet property="billText" destination="NFM-di-8ei" id="Rgk-RK-GTP"/>
+                        <outlet property="tipLabel" destination="SXt-ap-uQS" id="tPh-EM-Cf7"/>
+                        <outlet property="totalLabel" destination="tNY-fA-fXC" id="wRH-Ss-8Fa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="7VE-B5-StQ">
