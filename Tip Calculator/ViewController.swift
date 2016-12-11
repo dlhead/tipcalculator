@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var billText: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
 
@@ -29,5 +28,9 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
 
+    @IBAction func calculateTip(_ sender: Any) {
+        tipLabel.text = "$10.00"
+        totalLabel.text = "$110.00"
+    }
 }
 
