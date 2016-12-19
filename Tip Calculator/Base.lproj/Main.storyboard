@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="U2l-Om-zAU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="U2l-Om-zAU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -86,7 +86,13 @@
                             <outletCollection property="gestureRecognizers" destination="7VE-B5-StQ" appends="YES" id="cTo-yP-QAL"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="U3f-Qo-4RR"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="U3f-Qo-4RR">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="ZbO-Be-wA3">
+                            <connections>
+                                <segue destination="zpR-dD-SpQ" kind="push" id="0Rm-YD-MkB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="NFM-di-8ei" id="n0k-Ti-2JW"/>
                         <outlet property="tipControl" destination="ACX-rD-tZ2" id="Awo-0W-Cyr"/>
@@ -102,6 +108,21 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="660.5" y="137.5"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Q25-li-NNI">
+            <objects>
+                <viewController id="zpR-dD-SpQ" customClass="SettingsViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jnc-D9-fsa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0W9-qh-itz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omY-GI-CRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yqu-bq-w5y">
