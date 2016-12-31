@@ -87,7 +87,7 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="U3f-Qo-4RR">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="ZbO-Be-wA3">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="ZbO-Be-wA3">
                             <connections>
                                 <segue destination="zpR-dD-SpQ" kind="push" id="0Rm-YD-MkB"/>
                             </connections>
@@ -116,13 +116,37 @@
                     <view key="view" contentMode="scaleToFill" id="jnc-D9-fsa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Set Default Tip Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A2d-Cw-I86">
+                                <rect key="frame" x="16" y="104" width="177" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="92D-k9-EAh">
+                                <rect key="frame" x="9" y="147" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="saveDefaultTipPercent:" destination="zpR-dD-SpQ" eventType="valueChanged" id="muA-ED-YVO"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="0W9-qh-itz"/>
+                    <connections>
+                        <outlet property="defaultTipPercent" destination="92D-k9-EAh" id="PbK-1D-SeV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omY-GI-CRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="138"/>
+            <point key="canvasLocation" x="1073.5" y="137.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yqu-bq-w5y">

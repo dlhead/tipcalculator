@@ -9,6 +9,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    @IBOutlet weak var defaultTipPercent: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +32,15 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    let defaults = UserDefaults.standard
+    
+    @IBAction func saveDefaultTipPercent(_ sender: Any) {
+        // Access UserDefaults
+        
+        defaults.set(defaultTipPercent.selectedSegmentIndex,forKey: "DefaultPercent")
+        print(defaultTipPercent.selectedSegmentIndex)
+        defaults.synchronize()
+    }
 
 }
