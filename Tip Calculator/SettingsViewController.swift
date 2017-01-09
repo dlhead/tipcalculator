@@ -33,10 +33,11 @@ class SettingsViewController: UIViewController {
     }
     */
     
-    let defaults = UserDefaults.standard
     
     @IBAction func saveDefaultTipPercent(_ sender: Any) {
         // Access UserDefaults
+        
+        let defaults = UserDefaults.standard
         
         defaults.set(defaultTipPercent.selectedSegmentIndex,forKey: "DefaultPercent")
         print(defaultTipPercent.selectedSegmentIndex)
